@@ -1,7 +1,8 @@
 import * as C from './App.styles';
 import logoImage from './assets/logo.png';
 import RestartIcon from './svgs/restart.svg'
-import PauseIcon from './svgs/pause.svg'
+import PauseIcon from './svgs/pause.svg';
+import PlayIcon from './svgs/play.svg'
 import {InfoItem} from './components/InfoItem';
 import {Button} from './components/Button';
 import {GridItem} from './components/GridItem';
@@ -76,6 +77,8 @@ const App = () => {
     }
   },[moveCount,gridItems])
 
+
+
   const resetAndCreateGrid = () => {
     //passo 1 - reiniciar o jogo
     setTimeElapsed(0);
@@ -141,7 +144,7 @@ const App = () => {
           <InfoItem label='Movimentos' value={moveCount.toString()}/>
         </C.InfoArea>
         <Button label='Reiniciar' icon={RestartIcon} onClick={resetAndCreateGrid} />
-        <Button label='Pausar' onClick={pauseGame} />
+        <Button label={playing ?'Pausar': 'Continuar'} icon={playing ? PauseIcon : PlayIcon} onClick={pauseGame} />
       </C.Info>
       <C.gridArea>
         <C.Grid>

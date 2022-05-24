@@ -4,7 +4,6 @@
   <title>Layer 1</title>
   <line id="svg_2" y2="18.77498" x2="10.62501" y1="4.65002" x1="4.50002" fill="none"/>
   <line id="svg_5" y2="18.77498" x2="19.87498" y1="4.65002" x1="13.75" fill="none"/>
-  <rect id="svg_6" height="14.12497" width="6.24999" y="4.62502" x="4.50002" fill="#ffffff"/>
-  <rect id="svg_7" height="14.12497" width="6.24999" y="4.75002" x="13.875" fill="#ffffff"/>
+  <path transform="rotate(90.1418 13.605 12.3231)" id="svg_8" d="m5.98002,19.32311l7.62498,-13.99997l7.62498,13.99997l-15.24996,0z" fill="#ffffff"/>
  </g>
 </svg>
