@@ -1,6 +1,7 @@
 import * as C from './App.styles';
 import logoImage from './assets/logo.png';
 import RestartIcon from './svgs/restart.svg'
+import PauseIcon from './svgs/pause.svg'
 import {InfoItem} from './components/InfoItem';
 import {Button} from './components/Button';
 import {GridItem} from './components/GridItem';
@@ -8,6 +9,7 @@ import { useEffect, useState } from 'react';
 import {GridItemType} from './types/GridItemType';
 import {items} from './data/items';
 import {formatTime} from './helpers/formatTime';
+
 
 const App = () => {
 
@@ -123,6 +125,9 @@ const App = () => {
       setGridItems(tmpGrid);
     }
   }
+  const pauseGame = () => {
+    setPlaying(!playing);
+  }
 
   return (
     <C.Container>
@@ -136,7 +141,7 @@ const App = () => {
           <InfoItem label='Movimentos' value={moveCount.toString()}/>
         </C.InfoArea>
         <Button label='Reiniciar' icon={RestartIcon} onClick={resetAndCreateGrid} />
-        
+        <Button label='Pausar' onClick={pauseGame} />
       </C.Info>
       <C.gridArea>
         <C.Grid>
